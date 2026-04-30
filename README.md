@@ -119,8 +119,8 @@ python train_model.py
 Outputs:
 
 ```
-models/fraud_model.pkl
-models/feature_columns.pkl
+ml/fraud_model.pkl
+ml/feature_columns.pkl
 ```
 
 
