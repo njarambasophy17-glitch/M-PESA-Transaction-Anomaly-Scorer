@@ -9,6 +9,7 @@ random.seed(42)
 def generate_mpesa_data(n_transactions=10000, n_users=2000):
 
     # --- Split legit vs fraud ---
+    
     n_legit = int(n_transactions * 0.97)
     n_fraud = n_transactions - n_legit
 
@@ -18,7 +19,7 @@ def generate_mpesa_data(n_transactions=10000, n_users=2000):
     # FIX: match probability length (14 values)
     legit_probs = np.array([
         0.03, 0.05, 0.07, 0.09, 0.10, 0.11, 0.11,
-        0.10, 0.09, 0.08, 0.07, 0.05, 0.03, 0.02
+        0.10, 0.09, 0.08, 0.07, 0.05, 0.03, 0.02, 0.02
     ])
     legit_probs = legit_probs / legit_probs.sum()
 
@@ -95,7 +96,7 @@ def generate_mpesa_data(n_transactions=10000, n_users=2000):
     df['user_id'] = np.random.choice(user_ids, size=len(df))
 
     # --- User behavior ---
-    user_avg = {user: np.random.uniform(200, 5000) for user in user_ids}
+    user_avg = {user: np.random.uniform(200, 40000) for user in user_ids}
     df['user_avg_amount'] = df['user_id'].map(user_avg)
 
     df['amount_deviation'] = df['amount_kes'] / df['user_avg_amount']
