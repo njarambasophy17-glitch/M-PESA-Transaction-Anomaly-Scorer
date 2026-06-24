@@ -14,9 +14,9 @@ def generate_mpesa_data(n_transactions=10000, n_users=2000):
     n_fraud = n_transactions - n_legit
 
     # --- Legitimate transactions ---
-    legit_hours_list = list(range(7, 22))  # 7AM → 9PM (14 values)
+    legit_hours_list = list(range(7, 22))  # 7AM → 9PM (15 values)
 
-    # FIX: match probability length (14 values)
+    # FIX: match probability length (15 values)
     legit_probs = np.array([
         0.03, 0.05, 0.07, 0.09, 0.10, 0.11, 0.11,
         0.10, 0.09, 0.08, 0.07, 0.05, 0.03, 0.02, 0.02
