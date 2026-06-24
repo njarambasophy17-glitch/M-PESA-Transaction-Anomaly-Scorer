@@ -4,7 +4,7 @@ import requests
 # ─────────────────────────────────────────────
 # API CONFIG
 # ─────────────────────────────────────────────
-API_URL = "http://127.0.0.1:8000/score_explain"
+API_URL = "https://m-pesa-transaction-anomaly-scorer-suh8.onrender.com/score_explain"
 
 # ─────────────────────────────────────────────
 # PAGE CONFIG

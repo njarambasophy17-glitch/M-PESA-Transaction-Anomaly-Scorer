@@ -1,4 +1,4 @@
 # ignore virtual environment
-fraud_venv/
+.venv/
 /_pycache__/
 *.pyc
